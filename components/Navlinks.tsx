@@ -1,0 +1,48 @@
+import { useRef, useState } from 'react'
+import { AnimatePresence, motion } from 'motion/react'
+import { Link } from 'react-router'
+
+export function NavLinks() {
+  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  let timeoutRef = useRef<number | null>(null)
+
+  return [
+    ['Features', '/#features'],
+    ['Reviews', '/#reviews'],
+    ['Pricing', '/#pricing'],
+    ['FAQs', '/#faqs'],
+  ].map(([label, href], index) => (
+    <Link
+      key={label}
+      to={href}
+      className="relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-0"
+      onMouseEnter={() => {
+        if (timeoutRef.current) {
+          window.clearTimeout(timeoutRef.current)
+        }
+        setHoveredIndex(index)
+      }}
+      onMouseLeave={() => {
+        timeoutRef.current = window.setTimeout(() => {
+          setHoveredIndex(null)
+        }, 200)
+      }}
+    >
+      <AnimatePresence>
+        {hoveredIndex === index && (
+          <motion.span
+            className="absolute inset-0 rounded-lg bg-gray-200 dark:bg-gray-700/50"
+            layoutId="hoverBackground"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 0.20 } }}
+            exit={{
+              opacity: 0,
+              transition: { duration: 0.20 },
+            }}
+          />
+        )}
+      </AnimatePresence>
+      <span className="relative z-10 text-foreground font-opensans font-semibold">{label}</span>
+    </Link>
+  ))
+}
