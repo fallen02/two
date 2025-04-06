@@ -56,7 +56,7 @@ export function Brands() {
           </InfiniteSlider>
         </div>
       </div>
-      <div className="opacity-25 absolute  z-50 h-96 w-[80%] translate-y-3/6 rounded-full blur-3xl  bg-gradient-to-r from-15% to-85% -transparent via-cyan-600 to-transparent" />
+      <div className="opacity-25 absolute  z-50 h-96 w-[80%] translate-y-3/6 rounded-full blur-3xl  bg-gradient-to-r from-5% to-95% -transparent via-cyan-600 to-transparent" />
       <div className="absolute z-[999] h-[2px] w-[80%] bottom-0  rounded-full  bg-gradient-to-r from-transparent via-blue-600 to-transparent " />
     </Container>
   );
