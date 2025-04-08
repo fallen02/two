@@ -9,7 +9,7 @@
   /* "Suisse Int'l", ui-sans-serif, system-ui, sans-serif, */
   /* "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
 }
-/* 
+/*
 html,
 body {
   @apply bg-white dark:bg-gray-950;
@@ -85,11 +85,27 @@ body {
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+
+  
+}
+@theme{
+    --animate-marquee-left: marquee-left var(--duration, 40s) linear infinite;
+    --animate-marquee-up: marquee-up var(--duration, 40s) linear infinite;
+    
+  
+    @keyframes marquee-left {
+        from { transform: "translateX(0)" }
+        to { transform: "translateX(calc(-100% - var(--gap)))" }
+    }
+    @keyframes marquee-up {
+        from { transform: "translateY(0)" }
+        to { transform: "translateY(calc(-100% - var(--gap)))" }
+    }
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 scroll-smooth;
   }
   body {
     @apply bg-background text-foreground;

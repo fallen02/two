@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/section/Hero";
 import { Brands } from "@/components/section/Brands";
 import { Pricing } from "@/components/section/Pricing";
 import { Features } from "@/components/section/Features";
+import { Marketing } from "@/components/section/Marketing";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -20,6 +21,7 @@ export default function Home() {
       <Brands />    
       <Pricing />
       <Features />
+      <Marketing />
     </>
   )
 }

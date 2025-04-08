@@ -6,6 +6,7 @@ import Arxiv from "@/assets/brands/arxiv.svg";
 import Hubspot from "@/assets/brands/hubspot.svg";
 import Shopify from "@/assets/brands/shopify.svg";
 import Stripe from "@/assets/brands/stripe.svg";
+import { Marquee } from "../Marquee";
 
 const brands = [
   {
@@ -44,6 +45,22 @@ export function Brands() {
         <h1 className="text-5xl font-semibold">Trusted by 300+ Companies</h1>
         <div className="relative z-10">
           <div className="absolute z-50 h-full w-full bg-gradient-to-r from-background via-transparent to-background" />
+
+          {/* <Marquee
+            className="gap-[6rem] [--duration:25s] bg-orange-950 p-8"
+            fade
+            innerClassName="gap-[3rem]"
+            // pauseOnHover
+          >
+            {brands.map((brand, index) => (
+              <img
+                key={index}
+                src={brand.img}
+                alt={brand.alt}
+                className="h-[120px] w-auto filter invert-0 dark:invert"
+              />
+            ))}
+          </Marquee> */}
           <InfiniteSlider gap={48} reverse>
             {brands.map((brand, index) => (
               <img
