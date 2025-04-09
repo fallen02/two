@@ -1,5 +1,4 @@
 import { Container } from "../Container";
-import { InfiniteSlider } from "../InfiniteSlider";
 import Instagram from "@/assets/brands/instagram.svg";
 import ApplePay from "@/assets/brands/apple-pay.svg";
 import Arxiv from "@/assets/brands/arxiv.svg";
@@ -46,11 +45,12 @@ export function Brands() {
         <div className="relative z-10">
           <div className="absolute z-50 h-full w-full bg-gradient-to-r from-background via-transparent to-background" />
 
-          {/* <Marquee
-            className="gap-[6rem] [--duration:25s] bg-orange-950 p-8"
+          <Marquee
+            className="[--duration:20s] pt-8"
             fade
             innerClassName="gap-[3rem]"
-            // pauseOnHover
+            numberOfCopies={5}
+            pauseOnHover
           >
             {brands.map((brand, index) => (
               <img
@@ -60,17 +60,7 @@ export function Brands() {
                 className="h-[120px] w-auto filter invert-0 dark:invert"
               />
             ))}
-          </Marquee> */}
-          <InfiniteSlider gap={48} reverse>
-            {brands.map((brand, index) => (
-              <img
-                key={index}
-                src={brand.img}
-                alt={brand.alt}
-                className="h-[120px] w-auto filter invert-0 dark:invert"
-              />
-            ))}
-          </InfiniteSlider>
+          </Marquee>
         </div>
       </div>
       <div className="opacity-25 absolute  z-50 h-96 w-[80%] translate-y-3/6 rounded-full blur-3xl  bg-gradient-to-r from-5% to-95% -transparent via-cyan-600 to-transparent" />

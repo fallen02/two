@@ -160,7 +160,7 @@ export function Pricing() {
         </div>
       </Container>
       
-      <div className="opacity-25 absolute -z-10 h-96 w-[80%] right-0 -translate-y-3/6 translate-x-1/2 rounded-full blur-3xl  bg-gradient-to-r from-5% to-95% -transparent via-cyan-600 to-transparent" />
+      <div className=" opacity-25 absolute -z-10 h-96 w-[80%] right-0 -translate-y-3/6 translate-x-1/2 rounded-full blur-3xl  bg-gradient-to-r from-5% to-95% -transparent via-cyan-600 to-transparent" />
       <div className="opacity-25 absolute -z-10 h-96 w-[80%] left-0 translate-y-5/6 -translate-x-1/2 rounded-full blur-3xl  bg-gradient-to-r from-5% to-95% -transparent via-cyan-600 to-transparent" />
     </div>
   );
@@ -174,8 +174,8 @@ function CheckLogo(props: React.ComponentPropsWithoutRef<"svg">) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
+      strokeWidth="2"
+      strokeLinecap="round"
       strokeLinejoin="round"
       {...props}
     >

@@ -15,40 +15,23 @@ import { NavLinks } from "../Navlinks";
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
-    // <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
-    //   <path
-    //     d="M5 6h14M5 18h14M5 12h14"
-    //     strokeWidth={2}
-    //     strokeLinecap="round"
-    //     strokeLinejoin="round"
-    //   />
-    // </svg>
-
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
-      <path d="M3 7H21" stroke-width="1.5" stroke-linecap="round" />
-      <path d="M9.49023 12H21.0002" stroke-width="1.5" stroke-linecap="round" />
-      <path d="M3 12H5.99" stroke-width="1.5" stroke-linecap="round" />
-      <path d="M3 17H21" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M3 7H21" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M9.49023 12H21.0002" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M3 12H5.99" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M3 17H21" strokeWidth="1.5" strokeLinecap="round" />
     </svg>
   );
 }
 
 function ChevronUpIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
-    // <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
-    //   <path
-    //     d="M17 14l-5-5-5 5"
-    //     strokeWidth={2}
-    //     strokeLinecap="round"
-    //     strokeLinejoin="round"
-    //   />
-    // </svg>
     <svg
       viewBox="0 0 24 24"
       fill="none"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       aria-hidden="true" 
       {...props}
     >
